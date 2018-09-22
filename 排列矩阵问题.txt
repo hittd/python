@@ -1,0 +1,20 @@
+#输入x * y个数，将他们按大小顺序正序排列并以矩阵格式输出
+
+
+def print_low():
+    x = int(input("Please enter x:(行数)"))
+    y = int(input("Please enter y:(列数)"))
+    list1 = []
+    for a in range(x * y):
+        content = int(input("Please input content:"))
+        list1.append(content)
+    list1.sort()
+    num = 0
+    for b in range(x * y):
+        print(list1[num], end=' ')
+        num = num + 1
+        if num % y == 0:
+            print('\n')
+
+
+print_low()
